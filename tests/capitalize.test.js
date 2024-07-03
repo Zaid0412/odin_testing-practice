@@ -1,3 +1,5 @@
+import { capitalize } from "../code/capitalize";
+
 it("Capitalize first letter of string", () => {
   expect(capitalize("jest")).toBe("Jest");
 });
