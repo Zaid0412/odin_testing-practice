@@ -1,4 +1,8 @@
 export function capitalize(str) {
+  if (str == null || str == undefined) {
+    return "";
+  }
+
   // Extracting the first letter of the string and converting it to upper case
   let firstLetterUpper = str.substr(0, 1).toUpperCase();
 
