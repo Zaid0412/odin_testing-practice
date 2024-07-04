@@ -1,32 +1,5 @@
-export function caesarCipher(str, shift) {
-  const alphabets = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-  ];
+function caesarCipher(str, shift) {
+  const alphabets = "abcdefghijklmnopqrstuvwxyz".split("");
 
   // Splitting up all of the characters of the string into elements of an array
   let strLetters = str.split("");
@@ -39,7 +12,6 @@ export function caesarCipher(str, shift) {
     let lowerCaseLetter = letter.toLowerCase();
 
     let letterIndex = alphabets.indexOf(lowerCaseLetter);
-    console.log(letterIndex);
 
     if (letterIndex != -1) {
       // Getting the index of the shifted character
@@ -55,7 +27,7 @@ export function caesarCipher(str, shift) {
         shiftedLetterArr.push(alphabets[letterIndex].toUpperCase()); // Convert character to upper case and push it to shiftedLetterArray
       } else {
         // If original character was lower case
-        shiftedLetterArr.push(alphabets[letterIndex].toLowerCase()); // Push the character to shiftedLetterArray
+        shiftedLetterArr.push(alphabets[letterIndex]); // Push the character to shiftedLetterArray
       }
     }
     // Check if letter is a punctuation
