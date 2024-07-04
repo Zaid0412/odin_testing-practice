@@ -1,4 +1,4 @@
-function caesarCipher(str, shift) {
+export function caesarCipher(str, shift) {
   const alphabets = "abcdefghijklmnopqrstuvwxyz".split("");
 
   // Splitting up all of the characters of the string into elements of an array
